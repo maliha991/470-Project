@@ -44,7 +44,7 @@ class User(UserMixin, db.Model):
 
     def follow(self, user):
         if not self.is_following(user):
-            self.followed.mvc_structureend(user)
+            self.followed.append(user)
 
     def unfollow(self, user):
         if self.is_following(user):
